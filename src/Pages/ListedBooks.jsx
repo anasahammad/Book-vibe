@@ -2,17 +2,28 @@ import { useEffect, useState } from "react";
 import { getRead } from "../utilies/useReadStorage";
 import { Link } from "react-router-dom";
 import Read from "../Components/Read";
+import { getWishes } from "../utilies/useWishtListStorage";
+import WhistList from "../Components/WhistList";
 
 
 const ListedBooks = () => {
 
     const [read, setRead] = useState([])
+    const [wishList, setWishList] = useState([]);
     const [tabIndex, setTabIndex] = useState(0)
 
     useEffect(()=> {
         let storeReads = getRead();
         setRead(storeReads);
-    }, [])
+
+        
+       
+        let storeWishList = getWishes();
+        setWishList(storeWishList);
+        console.log(storeReads, storeWishList)
+    }, []);
+
+    
     return (
         <div className="max-w-7xl mx-auto">
             <div className="bg-[#1313130d] py-4 rounded-2xl">
@@ -39,7 +50,7 @@ const ListedBooks = () => {
 		<span className=" text-[18px] font-work-sans ">Read Books</span>
 	</Link>
 	<Link to={`whist-list`}
-        onClick={()=> setTabIndex(1)}
+        onClick={()=> {setTabIndex(1)}}
         className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 1 ? 'border border-b-0 text-[#131313cc]' : 'border-b text-[#13131380]'
           }  `}>
@@ -48,11 +59,28 @@ const ListedBooks = () => {
 	</Link>
 	<div className="border-b w-full"></div>
 </div>
-<div className="grid grid-cols-1 gap-6">
-          {
-            read.map(item=> <Read key={item.bookId} item={item}></Read>)
-          }
+<div>
+
+
+
+ <div className="grid grid-cols-1 gap-6">
+ {
+    tabIndex === 0 && 
+   read.map(item=> <Read key={item.bookId} item={item}></Read>)
+ }
 </div>
+
+<div className="grid grid-cols-1 gap-6">
+ {
+    tabIndex === 1 &&
+    wishList.map(item=> <WhistList key={item.bookId} item={item}></WhistList>)
+ }
+</div>
+</div>
+
+    
+
+
 
         </div>
     );

@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import useBooks from "../Hooks/useBooks";
 import { useEffect, useState } from "react";
 import { saveReads } from "../utilies/useReadStorage";
+import { saveWishes } from "../utilies/useWishtListStorage";
 
 const BookDetails = () => {
    const {bookId} = useParams()
@@ -23,7 +24,9 @@ const BookDetails = () => {
 const handleRead = data=>{
     saveReads(data);
 }
-
+const handleWish = data =>{
+    saveWishes(data)
+}
     return (
         <div className="hero max-w-7xl mx-auto mt-6">
         <div className="hero-content flex-col lg:flex-row">
@@ -68,7 +71,7 @@ const handleRead = data=>{
                 <div className="font-work-sans mt-4" >
                     <Link>
                     <Link><button onClick={()=>handleRead(singleBooks)} className="btn mr-4 text-[18px] font-semibold border-[#1313134d]">Read</button></Link>
-                        <Link><button className="btn text-[18px] bg-[#59C6D2] font-semibold text-white">Wishlist</button></Link>
+                        <Link><button onClick={()=> handleWish(singleBooks )} className="btn text-[18px] bg-[#59C6D2] font-semibold text-white">Wishlist</button></Link>
                     </Link>
                 </div>
             </div>
