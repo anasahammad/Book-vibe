@@ -1,23 +1,28 @@
 import { Link, useParams } from "react-router-dom";
 import useBooks from "../Hooks/useBooks";
 import { useEffect, useState } from "react";
+import { saveReads } from "../utilies/useReadStorage";
 
 const BookDetails = () => {
    const {bookId} = useParams()
    const {data} = useBooks()
    const [singleBook, setSingleBook] = useState([]);
-
+   let singleBooks = data.find(item => item.bookId === parseInt(bookId));
    useEffect(()=>{
-    let singleBooks = data.find(item => item.bookId === parseInt(bookId));
+  
     setSingleBook(singleBooks);
 
-   }, [bookId, data])
+   }, [singleBooks])
 
    const {bookName, author, image, rating, category, tags, review, totalPages, publisher, yearOfPublishing} = singleBook || {};
 
 //    for(let tag in tags){
 //     console.log(typeof tag);
 //    }
+
+const handleRead = data=>{
+    saveReads(data);
+}
 
     return (
         <div className="hero max-w-7xl mx-auto mt-6">
@@ -62,7 +67,7 @@ const BookDetails = () => {
 
                 <div className="font-work-sans mt-4" >
                     <Link>
-                    <Link><button className="btn mr-4 text-[18px] font-semibold border-[#1313134d]">Read</button></Link>
+                    <Link><button onClick={()=>handleRead(singleBooks)} className="btn mr-4 text-[18px] font-semibold border-[#1313134d]">Read</button></Link>
                         <Link><button className="btn text-[18px] bg-[#59C6D2] font-semibold text-white">Wishlist</button></Link>
                     </Link>
                 </div>
