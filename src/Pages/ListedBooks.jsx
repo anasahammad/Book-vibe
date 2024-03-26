@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getRead } from "../utilies/useReadStorage";
 import { Link } from "react-router-dom";
+import Read from "../Components/Read";
 
 
 const ListedBooks = () => {
@@ -28,7 +29,7 @@ const ListedBooks = () => {
             </div>
 
 
-            <div className="flex  mx-7 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800 ">
+            <div className="flex  mb-5 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800 ">
 	<Link to=""
     onClick={()=> setTabIndex(0)}
     className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
@@ -47,6 +48,12 @@ const ListedBooks = () => {
 	</Link>
 	<div className="border-b w-full"></div>
 </div>
+<div className="grid grid-cols-1 gap-6">
+          {
+            read.map(item=> <Read key={item.bookId} item={item}></Read>)
+          }
+</div>
+
         </div>
     );
 };
