@@ -3,11 +3,14 @@ import useBooks from "../Hooks/useBooks";
 import { useEffect, useState } from "react";
 import { saveReads } from "../utilies/useReadStorage";
 import { saveWishes } from "../utilies/useWishtListStorage";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
    const {bookId} = useParams()
    const {data} = useBooks()
    const [singleBook, setSingleBook] = useState([]);
+   const [readBtn, setReadBtn] = useState(false)
    let singleBooks = data.find(item => item.bookId === parseInt(bookId));
    useEffect(()=>{
   
@@ -21,11 +24,19 @@ const BookDetails = () => {
 //     console.log(typeof tag);
 //    }
 
+
+  
 const handleRead = data=>{
     saveReads(data);
+    setReadBtn(true)
 }
-const handleWish = data =>{
-    saveWishes(data)
+const handleWish = (data) =>{
+    if(!readBtn){
+      saveWishes(data)
+    }else{
+       return toast.error("You cannot add this in wish list")
+    }
+    
 }
     return (
         <div className="hero max-w-7xl mx-auto mt-6">

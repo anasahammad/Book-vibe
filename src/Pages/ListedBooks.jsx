@@ -16,11 +16,9 @@ const ListedBooks = () => {
         let storeReads = getRead();
         setRead(storeReads);
 
-        
-       
         let storeWishList = getWishes();
         setWishList(storeWishList);
-        console.log(storeReads, storeWishList)
+       
     }, []);
 
     
