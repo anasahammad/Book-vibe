@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { getRead } from '../utilies/useReadStorage';
-import useBooks from '../Hooks/useBooks';
+
 
 
 
@@ -70,12 +70,8 @@ const data = [
 const PagesToRead = () => {
     let readBooks=  getRead();
     // console.log(readBooks);
-    const [reads, setReads] = useState([]);
-   useEffect(()=>{
-        setReads(readBooks)
-   }, [readBooks])
    
-   console.log(reads.bookId);
+  
     return (
        <div style={{width: "100%", height: "80vh"}} className='max-w-7xl mx-auto'>
          <BarChart 

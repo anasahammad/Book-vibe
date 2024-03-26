@@ -25,7 +25,6 @@ const BookDetails = () => {
 //    }
 
 
-  
 const handleRead = data=>{
     saveReads(data);
     setReadBtn(true)
@@ -57,6 +56,7 @@ const handleWish = (data) =>{
             <div className="flex gap-4 font-work-sans ">
             <p className="text-[#131313] font-bold">Tag</p>
             <p className="flex gap-4 justify-between text-[#23BE0A] font-medium">#{tags}</p>
+           
             </div>
             
             <div className="divider"></div>

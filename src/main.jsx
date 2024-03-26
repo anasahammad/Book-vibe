@@ -13,11 +13,15 @@ import BookDetails from './Components/BookDetails';
 import { ToastContainer } from 'react-toastify';
 import Read from './Components/Read';
 import WhistList from './Components/WhistList';
+import Error from './Pages/Error';
+import Contact from './Pages/Contact';
+import Modal from './Pages/Modal';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    // errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -42,6 +46,18 @@ const router = createBrowserRouter([
         path: "/pages-to-read",
         element: <PagesToRead></PagesToRead>
       },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+        children:[
+          {
+            path: "modal",
+            element: <Modal></Modal>
+          }
+        ]
+      },
+          
+        
       {
         path: "/books-details/:bookId",
         element:<BookDetails></BookDetails>

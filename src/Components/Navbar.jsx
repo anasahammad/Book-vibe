@@ -36,6 +36,9 @@ const Navbar = () => {
         to="/listed-books" 
         className={({isActive})=> isActive? "border border-[#23BE0A] btn text-[#23BE0A] font-bold" : ""}>Listed Books</NavLink>
         <NavLink to="/pages-to-read" className={({isActive})=> isActive? "border border-[#23BE0A] btn text-[#23BE0A] " : ""}>Pages to Read</NavLink>
+
+        
+        <NavLink to="/contact" className={({isActive})=> isActive? "border border-[#23BE0A] btn text-[#23BE0A] " : ""}>Contact Us</NavLink>
        
     
     </ul>
