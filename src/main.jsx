@@ -16,6 +16,7 @@ import WhistList from './Components/WhistList';
 import Error from './Pages/Error';
 import Contact from './Pages/Contact';
 import Modal from './Pages/Modal';
+import AboutUs from './Pages/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/pages-to-read",
         element: <PagesToRead></PagesToRead>
+      },
+      {
+        path:"/about-us",
+        element: <AboutUs></AboutUs>
       },
       {
         path: "/contact",
