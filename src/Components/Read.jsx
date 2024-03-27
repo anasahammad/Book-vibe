@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsPeople } from "react-icons/bs";
 import pages from "../assets/icons/Frame.png"
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 const Read = ({item}) => {
     const {bookName, author, image, rating, category, tags, bookId, totalPages , yearOfPublishing} = item;
     return (
@@ -48,5 +49,8 @@ const Read = ({item}) => {
         </div>
     );
 };
+Read.propTypes = {
+    item: PropTypes.object
+}
 
 export default Read;

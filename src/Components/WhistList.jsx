@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsPeople } from "react-icons/bs";
 import pages from "../assets/icons/Frame.png"
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 const WhistList = ({item}) => {
     const {bookName, author, image, rating, category, tags, bookId, totalPages, yearOfPublishing } = item;
     return (
@@ -46,5 +47,9 @@ const WhistList = ({item}) => {
         </div>
     );
 };
+
+WhistList.propTypes = {
+    item: PropTypes.object
+}
 
 export default WhistList;

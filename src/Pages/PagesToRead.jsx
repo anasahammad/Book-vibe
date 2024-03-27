@@ -3,10 +3,6 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Legend, ResponsiveCon
 import { getRead } from '../utilies/useReadStorage';
 
 
-
-
-
-
 const data = [
     {
       name: "Anas",

@@ -1,5 +1,6 @@
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 const Book = ({item}) => {
     const {bookName, author, image, rating, category, tags, bookId } = item;
 
@@ -17,7 +18,7 @@ const Book = ({item}) => {
   <div className='font-work-sans flex items-center text-[#23BE0A] font-medium '>
    
   {
-    tags.map((item, index) => <p key={index} className="flex justify-between bg-[#23be0a0d]  px-2 text-center rounded-[36px] items-center" item={item}>{item}</p>)
+    tags.map((tag, index) => <p key={index} className="flex justify-between bg-[#23be0a0d]  px-2 text-center rounded-[36px] items-center" tag={tag}>{tag}</p>)
   }
   </div>
     <h2 className="font-playfair font-bold text-[#131313] text-2xl">{bookName}</h2>
@@ -37,4 +38,7 @@ const Book = ({item}) => {
     );
 };
 
+Book.propTypes = {
+  item: PropTypes.object
+}
 export default Book;

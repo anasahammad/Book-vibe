@@ -1,32 +1,30 @@
-import useAboutUs from "../Hooks/useAboutUs";
+
 
 
 const AboutUs = () => {
 
-    const {about} = useAboutUs();
-
-    console.log(about);
+   
     return (
         <div className="max-w-7xl mx-auto px-6 py-16 mx-auto space-y-12">
 	<article className="space-y-8 dark:bg-gray-100 dark:text-gray-900">
 		<div className="space-y-6">
-			<h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">{about.companyName}</h1>
+			<h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">Book Vibe</h1>
 			
 		</div>
 		<div className="dark:text-gray-800">
-			<p>{about.companyCulture}</p>
+			<p>At BookVibe, we foster a culture of collaboration, creativity, and inclusivity. We believe in the power of books to inspire, educate, and connect people from diverse backgrounds and perspectives.</p>
 		</div>
 	</article>
 	<div>
 		
 		<div className="space-y-2">
 			
-			<h3 className="lg:text-3xl">Our Mission: {about.mission}</h3>
+			<h3 className="lg:text-3xl">Our Mission: To inspire and empower readers through curated book recommendations.</h3>
 				
 				<div className="divider"></div>	
 
                 <div>
-                    <h3><span className="text-[18px] font-bold">#Company History:</span> {about.companyHistory} </h3>
+                    <h3><span className="text-[18px] font-bold">#Company History:</span> BookVibe was founded in 2020 by a group of avid readers who wanted to create a platform where people could discover new books and connect with fellow book lovers. Since then, we have grown into a vibrant community of readers from around the world. </h3>
                 </div>
 			
 		</div>
@@ -40,7 +38,7 @@ const AboutUs = () => {
 		</div>
 		<div className="grid lg:w-full grid-cols-1 gap-6 md:grid-cols-2">
 			<div className="flex flex-col lg:flex-row space-x-6">
-				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlEaNIbF3EiMhtcKfnNeBSVWFG-iA6Hji73Q&s" />
+				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlEaNIbF3EiMhtcKfnNeBSVWFG-iA6Hji73Q&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Mr.David Lee</h4>
 					<p className="text-sm dark:text-gray-600">CEO of BookVibe</p>
@@ -60,7 +58,7 @@ const AboutUs = () => {
 				</div>
 			</div>
 			<div className="flex flex-col lg:flex-row  space-x-6">
-				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnNyE5cY-ZGHdwP0LPsHYB2dFojmf8rwZMQ&s" />
+				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm 0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnNyE5cY-ZGHdwP0LPsHYB2dFojmf8rwZMQ&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Emily Johnson</h4>
 					<p className="text-sm dark:text-gray-600">Head of Content</p>
@@ -80,7 +78,7 @@ const AboutUs = () => {
 				</div>
 			</div>
 			<div className="flex flex-col lg:flex-row  space-x-6">
-				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtY5wlvxWF63gd9BK2N9RkJZ_gwRL0nsFZDg&s" />
+				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm 0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtY5wlvxWF63gd9BK2N9RkJZ_gwRL0nsFZDg&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">John Smith</h4>
 					<p className="text-sm dark:text-gray-600">Community Manager</p>
@@ -100,7 +98,7 @@ const AboutUs = () => {
 				</div>
 			</div>
 			<div className="flex flex-col lg:flex-row  space-x-6">
-				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxxOK1e-RrwrQKHKFoL0qNx0JdWiK48uvvw&s" />
+				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm 0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxxOK1e-RrwrQKHKFoL0qNx0JdWiK48uvvw&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Ema Watson</h4>
 					<p className="text-sm dark:text-gray-600">Head of Media Coverage</p>
@@ -135,7 +133,7 @@ const AboutUs = () => {
 				<p>Mr. David Lee</p>
 				<p>CEO of Company Co.</p>
                 <p>Email: contact@business.com</p>
-                <p>+8801608005838</p>
+                <p>Phone: +8801608005838</p>
 			</div>
 			
 		</div>

@@ -11,7 +11,7 @@ const Modal = () => {
     <p className="py-4">We will talk to you as soon as possible. Please Stay with us.</p>
     <div className="modal-action">
       <form method="dialog">
-        {/* if there is a button in form, it will close the modal */}
+       
         <button className="btn">Close</button>
       </form>
     </div>

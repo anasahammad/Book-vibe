@@ -20,10 +20,6 @@ const BookDetails = () => {
 
    const {bookName, author, image, rating, category, tags, review, totalPages, publisher, yearOfPublishing} = singleBook || {};
 
-//    for(let tag in tags){
-//     console.log(typeof tag);
-//    }
-
 
 const handleRead = data=>{
     saveReads(data);
