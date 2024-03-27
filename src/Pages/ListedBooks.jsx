@@ -11,15 +11,38 @@ const ListedBooks = () => {
     const [read, setRead] = useState([])
     const [wishList, setWishList] = useState([]);
     const [tabIndex, setTabIndex] = useState(0);
-    
+    const [sortText, setSortText] = useState('');
 
- 
+   
+const handleSort = (event)=> {
+    setSortText(event.target.value);
+ }
+  
 
+ const getSortedBooks = (data)=>{
+    if(sortText === 'rating'){
+        let sortedBooks = data.sort((d1, d2)=>(d1.rating < d2.rating) ? 1 : (d1.rating > d2.rating) ? -1 : 0);
+        return sortedBooks;
+     }
+      else if (sortText === 'totalPages') {
+        let sortedBooks = data.sort((d1, d2)=>(d1.totalPages < d2.totalPages) ? 1 : (d1.totalPages > d2.totalPages) ? -1 : 0);
+        return sortedBooks;
+    }  else if(sortText === 'yearOfPublishing'){
+        let sortedBooks = data.sort((d1, d2)=>(d1.yearOfPublishing< d2.yearOfPublishing) ? 1 : (d1.yearOfPublishing > d2.yearOfPublishing) ? -1 : 0);
+        return sortedBooks;
+      } else{
+        return data;
+      }
+ }
+
+
+const sortReadBooks = getSortedBooks(read)
+const sortWishList = getSortedBooks(wishList)
  
     useEffect(()=> {
         let storeReads = getRead();
         setRead(storeReads);
-       
+      
         let storeWishList = getWishes();
         setWishList(storeWishList);
        
@@ -33,11 +56,11 @@ const ListedBooks = () => {
             <h1 className="text-3xl text-center text-[#131313] font-bold">Books</h1>
             </div>
             <div className="text-center my-5">
-            <select className="select  bg-[#23BE0A] text-white font-semibold">
-  <option  >Sort By</option>
-  <option >Rating</option>
-  <option >Number of pages</option>
-  <option>Published Year</option>
+            <select value={sortText} onChange={handleSort} className="select  bg-[#23BE0A] text-white font-semibold">
+  <option value="">Sort By</option>
+  <option  value="rating">Rating</option>
+  <option value="totalPages">Number of pages</option>
+  <option value="yearOfPublishing">Published Year</option>
  
 </select>
             </div>

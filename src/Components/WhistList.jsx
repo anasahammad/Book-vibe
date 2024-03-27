@@ -4,7 +4,7 @@ import { BsPeople } from "react-icons/bs";
 import pages from "../assets/icons/Frame.png"
 import { Link } from "react-router-dom";
 const WhistList = ({item}) => {
-    const {bookName, author, image, rating, category, tags, bookId, totalPages } = item;
+    const {bookName, author, image, rating, category, tags, bookId, totalPages, yearOfPublishing } = item;
     return (
         <div className="flex flex-col lg:flex-row justify-between border h- gap-6 rounded-2xl">
             <div className="lg:w-[30%] p-6 mx-auto" >
@@ -23,7 +23,7 @@ const WhistList = ({item}) => {
             }
             </p>
             
-            <p className="flex lg:items-center"><CiLocationOn></CiLocationOn> <span>Year of Publishing: 1924</span></p>
+            <p className="flex lg:items-center"><CiLocationOn></CiLocationOn> <span>Year of Publishing: {yearOfPublishing}</span></p>
             </div>
             <div className="flex items-center gap-6">
                 <p className="flex items-center gap-2"><BsPeople></BsPeople> <span>Publisher: Scribner</span></p>
