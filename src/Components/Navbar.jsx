@@ -19,8 +19,12 @@ const Navbar = () => {
         className={({isActive})=> isActive? "  text-green-500 font-bold" : ""}>Listed Books</NavLink>
         <NavLink to="/pages-to-read" className={({isActive})=> isActive? " font-bold text-green-500 " : ""}>Pages to Read</NavLink>
 
-        <NavLink className={"border border-green-300 text-center"}>Sign in</NavLink>
-        <NavLink  className={"border mt-2 border-green-300 text-center"}>Sign up</NavLink>
+        <NavLink to="/about-us" className={({isActive})=> isActive? " font-bold text-green-500 " : ""}>About Us</NavLink>
+
+        <NavLink to="/contact" className={({isActive})=> isActive? " font-bold text-green-500 " : ""}>Contact Us</NavLink>
+
+        <NavLink className={"border border-green-300 bg-[#23BE0A] text-center text-white"}>Sign in</NavLink>
+        <NavLink  className={"border mt-2 bg-[#59C6D2] text-white  text-center"}>Sign up</NavLink>
        
       </ul>
     </div>

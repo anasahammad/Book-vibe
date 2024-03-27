@@ -21,7 +21,7 @@ const AboutUs = () => {
 		
 		<div className="space-y-2">
 			
-			<h3 className="text-3xl">Our Mission: {about.mission}</h3>
+			<h3 className="lg:text-3xl">Our Mission: {about.mission}</h3>
 				
 				<div className="divider"></div>	
 
@@ -38,8 +38,8 @@ const AboutUs = () => {
 			<h3 className="text-2xl font-bold leading-none sm:text-5xl text-center">Meet our team</h3>
            
 		</div>
-		<div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
-			<div className="flex space-x-6">
+		<div className="grid lg:w-full grid-cols-1 gap-6 md:grid-cols-2">
+			<div className="flex flex-col lg:flex-row space-x-6">
 				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlEaNIbF3EiMhtcKfnNeBSVWFG-iA6Hji73Q&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Mr.David Lee</h4>
@@ -59,7 +59,7 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex space-x-6">
+			<div className="flex flex-col lg:flex-row  space-x-6">
 				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnNyE5cY-ZGHdwP0LPsHYB2dFojmf8rwZMQ&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Emily Johnson</h4>
@@ -79,7 +79,7 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex space-x-6">
+			<div className="flex flex-col lg:flex-row  space-x-6">
 				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtY5wlvxWF63gd9BK2N9RkJZ_gwRL0nsFZDg&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">John Smith</h4>
@@ -99,7 +99,7 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex space-x-6">
+			<div className="flex flex-col lg:flex-row  space-x-6">
 				<img alt="" className="flex-1 flex-shrink-0 object-cover h-56 mb-4 bg-center rounded-sm dark:bg-gray-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxxOK1e-RrwrQKHKFoL0qNx0JdWiK48uvvw&s" />
 				<div className="flex flex-col">
 					<h4 className="text-xl font-semibold">Ema Watson</h4>
