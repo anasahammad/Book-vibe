@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer } from 'recharts';
 import { getRead } from '../utilies/useReadStorage';
 
 
@@ -74,9 +74,10 @@ const PagesToRead = () => {
   
     return (
        <div style={{width: "100%", height: "80vh"}} className='max-w-7xl mx-auto'>
+        <ResponsiveContainer>
          <BarChart 
-      width={1170}
-      height={500}
+      width={500}
+      height={300}
       data={readBooks}
         
       margin={{
@@ -98,6 +99,7 @@ const PagesToRead = () => {
         ))}
       </Bar>
     </BarChart>
+    </ResponsiveContainer>
        </div>
     );
 };
