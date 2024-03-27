@@ -12,16 +12,20 @@ const ListedBooks = () => {
     const [wishList, setWishList] = useState([]);
     const [tabIndex, setTabIndex] = useState(0)
 
+ 
+
+ 
     useEffect(()=> {
         let storeReads = getRead();
         setRead(storeReads);
-
+       
         let storeWishList = getWishes();
         setWishList(storeWishList);
        
     }, []);
 
-    
+  
+
     return (
         <div className="max-w-7xl mx-auto">
             <div className="bg-[#1313130d] py-4 rounded-2xl">
@@ -29,9 +33,9 @@ const ListedBooks = () => {
             </div>
             <div className="text-center my-5">
             <select className="select  bg-[#23BE0A] text-white font-semibold">
-  <option disabled selected>Sort By</option>
-  <option>Rating</option>
-  <option>Number of pages</option>
+  <option  >Sort By</option>
+  <option >Rating</option>
+  <option >Number of pages</option>
   <option>Published Year</option>
  
 </select>

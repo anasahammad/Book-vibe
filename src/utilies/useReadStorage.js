@@ -14,7 +14,7 @@ export const saveReads = data=>{
     const isExist = reads.find(read=> read.bookId === data.bookId);
     if(isExist){
      
-        return toast.error("Book Already Read")
+        return toast.error("You have already read this book")
     }
     
         reads.push(data)

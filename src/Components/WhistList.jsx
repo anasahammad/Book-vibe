@@ -18,7 +18,10 @@ const WhistList = ({item}) => {
     <p className='font-work-sans mb-6 text-[#131313cc] font-medium'>By: {author}</p>
 
     <div className="flex flex-col lg:flex-row gap-4 font-work-sans mb-6">
-            <p className="text-[#131313] font-bold">Tag  <span className=" gap-4 justify-between text-[#23BE0A] font-medium">#{tags}</span></p>
+            <p className="text-[#131313] font-bold">Tag  {
+                tags.map((tag, index)=>  <span key={index} tag={tag} className="mr-4 justify-between text-[#23BE0A] font-medium">#{tag}</span>)
+            }
+            </p>
             
             <p className="flex lg:items-center"><CiLocationOn></CiLocationOn> <span>Year of Publishing: 1924</span></p>
             </div>

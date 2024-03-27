@@ -33,7 +33,7 @@ const handleWish = (data) =>{
     if(!readBtn){
       saveWishes(data)
     }else{
-       return toast.error("You cannot add this in wish list")
+       return toast.error("You have already read this book")
     }
     
 }
@@ -53,10 +53,12 @@ const handleWish = (data) =>{
             <p className='font-work-sans mb-4 text-[#131313cc]'>{category}</p>
 
             <p className="font-work-sans text-[#131313b3]"><span className="text-[#131313] font-bold">Review: </span>{review}</p>
-            <div className="flex gap-4 font-work-sans ">
-            <p className="text-[#131313] font-bold">Tag</p>
-            <p className="flex gap-4 justify-between text-[#23BE0A] font-medium">#{tags}</p>
-           
+            <div className="flex gap-4 font-work-sans mt-2">
+            <p className="text-[#131313] font-bold ">Tag</p>
+            {/* <p className="flex gap-4 justify-between text-[#23BE0A] font-medium">#{tags}</p> */}
+            {
+    tags?.map((item, index) => <p key={index} className="flex justify-between bg-[#23be0a0d] px-2 rounded-[36px]  text-[#23BE0A]  items-center" item={item}>#{item}</p>)
+  }
             </div>
             
             <div className="divider"></div>

@@ -19,6 +19,6 @@ export const saveWishes = data=>{
     
     wishes.push(data)
         localStorage.setItem("wishlist", JSON.stringify(wishes));
-        return toast.success("Book added for Wish List");
+        return toast.success("Book added at the Wish List");
     
 }

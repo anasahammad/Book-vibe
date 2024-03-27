@@ -14,17 +14,20 @@ const Book = ({item}) => {
 
   
   <div className="card-body ">
-  <div className='font-work-sans flex items-center text-[#23BE0A] font-medium space-x-3'>
-    {/* <p className="flex gap-4 justify-between">{tags}</p> */}
+  <div className='font-work-sans flex items-center text-[#23BE0A] font-medium '>
+   
   {
-    tags.map((item, index) => <p key={index} className="flex justify-between items-center" item={item}>#{item}</p>)
+    tags.map((item, index) => <p key={index} className="flex justify-between bg-[#23be0a0d]  px-2 text-center rounded-[36px] items-center" item={item}>{item}</p>)
   }
   </div>
     <h2 className="font-playfair font-bold text-[#131313] text-2xl">{bookName}</h2>
     <p className='font-work-sans text-[#131313cc]'>By: {author}</p>
-    <div className="flex justify-between flex-grow">
-        <p className='font-work-sans text-[#131313cc]'>{category}</p>
-        <p className='font-work-sans flex items-center gap-2 text-[#131313cc]'>{rating}  <CiStar /></p>
+    <div className=" flex-grow">
+      <div className="flex justify-between items-center">
+      <p className='font-work-sans  text-[#131313cc]'>{category}</p>
+        <p className='font-work-sans flex items-center lg:ml-36 gap-2 text-[#131313cc]'>{rating}  <CiStar /></p>
+      </div>
+       
     </div>
   </div>
 </div>

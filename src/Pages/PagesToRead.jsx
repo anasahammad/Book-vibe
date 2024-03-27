@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 import { getRead } from '../utilies/useReadStorage';
 
 
@@ -87,8 +87,11 @@ const PagesToRead = () => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
+      
       <XAxis dataKey="bookName" />
+      
       <YAxis />
+      <Legend></Legend>
       <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
