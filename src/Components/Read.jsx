@@ -19,10 +19,12 @@ const Read = ({item}) => {
     <p className='font-work-sans mb-6 text-[#131313cc] font-medium'>By: {author}</p>
 
     <div className="flex flex-col lg:flex-row gap-4 font-work-sans mb-6">
-            <p className="text-[#131313] font-bold">Tag 
+            <p className="text-[#131313] font-bold">Tag <span>
             {
                 tags.map((tag, index)=>  <span key={index} tag={tag} className="mr-4 justify-between text-[#23BE0A] font-medium">#{tag}</span>)
             }
+            </span>
+           
             
             </p>
             
@@ -38,12 +40,12 @@ const Read = ({item}) => {
 
             <div className="divider"></div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 items-center gap-3 font-work-sans">
+            <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-3 font-work-sans">
                 <button className="btn rounded-[36px] bg-[#328eff26] text-[#328EFF]">Category: {category}</button>
 
                 <button className="btn rounded-[36px] bg-[#ffac3326] text-[#FFAC33]">Rating: {rating}</button>
 
-                <Link  to={`/books-details/${bookId}`}><button className="btn rounded-[36px] bg-[#23BE0A] text-white mr-4">View Details</button></Link>
+                <Link  to={`/books-details/${bookId}`}><button className="btn rounded-[36px]  bg-[#23BE0A] text-white ">View Details</button></Link>
             </div>
             </div>
         </div>

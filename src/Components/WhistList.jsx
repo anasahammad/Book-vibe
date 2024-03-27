@@ -36,7 +36,7 @@ const WhistList = ({item}) => {
 
             <div className="divider"></div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 items-center gap-3 font-work-sans">
+            <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-3 font-work-sans">
                 <button className="btn rounded-[36px] bg-[#328eff26] text-[#328EFF]">Category: {category}</button>
 
                 <button className="btn rounded-[36px] bg-[#ffac3326] text-[#FFAC33]">Rating: {rating}</button>
